@@ -7,3 +7,7 @@ def multiply(x,y):
    for x in l:
       y += x
    return len(y)
+
+#returns x grteater than or equal to y
+def greater_than_or_equal(x,y):
+   return int(x/y)
