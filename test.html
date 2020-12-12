@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JSSample</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    $(function () {
+      var params = {
+        // Request parameters
+        "lat1": "29.7520116285855",
+        "lon1": "-95.3713343539019",
+        "lat2": "29.7548465554328",
+        "lon2": "-95.3357880398602",
+        "$orderby": "EndTime",
+        "endTime": "datetime'2012-09-12T20:00:00Z'",
+      };
+
+      $.ajax({
+        url: "https://hacktj2020api.eastbanctech.com/transitiq/CalculateItineraryArrivingAt?" + $.param(params),
+        beforeSend: function (xhrObj) {
+          // Request headers
+          xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "f3bba6ab132545f19a64d1bb2407096c");
+        },
+        type: "GET",
+        // Request body
+        data: "{body}",
+      })
+        .done(function (data) {
+          alert("success");
+        })
+        .fail(function () {
+          alert("error");
+        });
+    });
+  </script>
+</body>
+
+</html>
