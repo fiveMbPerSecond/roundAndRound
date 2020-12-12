@@ -14,10 +14,10 @@ h1 {
     margin: 0;
 }
 #landing-title {
-    height: 75vh;
+    height: 65vh;
 }
 #container {
-    height: 90vh;
+    height: 100vh;
     text-align: center;
 }
 #bus {
@@ -28,7 +28,7 @@ h1 {
     text-align: center;
 }
 #landing-spacer {
-    height: 5vh;
+    height: 10vh;
 }
 h2 {
     padding: 0;
@@ -51,12 +51,12 @@ h2 {
   #dot1{
     position: absolute;
     left: 65%;
-    top: 92vh;
+    top: 82vh;
   }
   #dot2{
     position: absolute;
     left: 30%;
-    top: 92vh;
+    top: 82vh;
   }
   a {
       text-emphasis: none;
