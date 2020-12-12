@@ -43,7 +43,6 @@ h2 {
 .dot {
     height: 3rem;
     width: 3rem;
-    background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
     background: #26325B;
@@ -61,4 +60,9 @@ h2 {
   a {
       text-emphasis: none;
       text-decoration: none;
+  }
+  #map {
+      background-color: #bbb;
+      height: 75vh;
+      width: 100%;
   }

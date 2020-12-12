@@ -15,7 +15,7 @@ params = urllib.parse.urlencode({
 })
 try:
     conn = http.client.HTTPSConnection('hacktj2020api.eastbanctech.com')
-    conn.request("GET", "/transitiq/Routes('RiOn432_2565_5589')/Stops?%s" % params, "{body}", headers)
+    conn.request("GET", "/transitiq/Vehicles?%s" % params, "{body}", headers)
     response = conn.getresponse()
     data = response.read()
     print(data)
