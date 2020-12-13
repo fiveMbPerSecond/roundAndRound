@@ -1,9 +1,11 @@
 <h1 align="center">round and round</h1>
+# UPDATE: ETA Retrieval Works -> Not shown in video
 
+### Working
+- Correctly parses multiple time values
+- ETA Retrival -> Commerce St, Houston TX | Austin St, Houston TX | 12/13/2020 9:00 PM (for working example 5s runtime)
 
 ### Currently in progress
-
-List of things still to do
 - User saveable routes
 - Higher resolution route visualization
 - Visualized possible stops on map
