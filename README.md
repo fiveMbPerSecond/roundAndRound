@@ -1,5 +1,5 @@
 <h1 align="center">round and round</h1>
-# UPDATE: ETA Retrieval Works -> Not shown in video
+### UPDATE: ETA Retrieval Works -> Not shown in video
 
 ### Working
 - Correctly parses multiple time values
