@@ -11,7 +11,7 @@ function ajax(startLoc, endLoc, startTime) {
     alert('Giving up :( Cannot create an XMLHTTP instance');
     return false;
   }
-
+  waitForElement();
   httpRequest.onreadystatechange = alertContents;
   httpRequest.open('GET', `ajax.php?lat1=${data1[0]}lon1=${data1[1]}&lat2=${data2[0]}&lon2=${data2[1]}&startTime=datetime'${stime}'&$format=json&$orderby=EndTime&subscription-key=3e65ceaade6c438c8abcebcd79766404`);
   httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -67,5 +67,13 @@ function loc(startLoc, endLoc) {
         alert('There was a problem with the request.');
       }
     }
+  }
+}
+function waitForElement(){
+  if(typeof data !== "undefined" || typeof data1 !== "undefined" || typeof data2 !== "undefined"){
+      //variable exists, do what you want
+  }
+  else{
+      setTimeout(waitForElement, 250);
   }
 }

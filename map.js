@@ -29,6 +29,8 @@ function calcRoute() {
     if (isNaN(date))
         alert("Invalid Date: must have day, month, and year");
     ajax(s,e,date.toISOString());
+    date = new Date(data["value"][0].EndTime);
+    document.getElementById("output").value = date.toString();
 
 }
 
