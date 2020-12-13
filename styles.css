@@ -124,6 +124,9 @@ h3 {
 #menu-toggle {
     display: none;
   }
+.menu-icon:hover {
+    cursor: pointer;
+}  
 button {
     background: #394881;
     border: none;
