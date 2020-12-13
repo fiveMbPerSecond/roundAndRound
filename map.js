@@ -39,9 +39,9 @@ function calcRoute() {
     date = new Date(other["value"][0].EndTime);
     document.getElementById("output").value = date.toString();
     latlngs = [
-        data1,
-        data2
-    ]
+        [data1[0],data1[1]],
+        [data2[0],data2[1]]
+    ];
     var polyline = L.polyline(latlngs, {color: 'red'}).addTo(mymap);
     mymap.fitBounds(polyline.getBounds());
 
