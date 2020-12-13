@@ -14,11 +14,11 @@ function ajax() {
       httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
       httpRequest.send();
     }
-  
+    var data;
     function alertContents() {
       if (httpRequest.readyState === XMLHttpRequest.DONE) {
         if (httpRequest.status === 200) {
-          alert(httpRequest.responseText);
+          data = JSON.parse(httpRequest.responseText);
         } else {
           alert('There was a problem with the request.');
         }
