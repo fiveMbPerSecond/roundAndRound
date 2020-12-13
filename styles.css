@@ -16,19 +16,19 @@ h1 {
 #landing-title {
     height: 65vh;
     opacity: 1;
-	animation-name: fadeInOpacity;
+	/* animation-name: fadeInOpacity;
 	animation-iteration-count: 0.6s;
 	animation-timing-function: ease-in;
-	animation-duration: 1s;
+	animation-duration: 1s; */
 }
-@keyframes fadeInOpacity {
+/* @keyframes fadeInOpacity {
 	0% {
 		opacity: 0;
 	}
 	100% {
 		opacity: 1;
 	}
-}
+} */
 #container {
     height: 100vh;
     text-align: center;
@@ -39,7 +39,7 @@ h1 {
 }
 #bus {
     position: relative;
-    left: -500px;
+    left: -1000px;
     top: 0vh;
     margin: auto;
     background: #F6E8A9;
@@ -47,7 +47,7 @@ h1 {
     height: 15vh;
     text-align: center;
     animation-delay: 05.s;
-    transform: translateX(500px);
+    transform: translateX(1000px);
     transition: all 0.5s ease-in-out;
 }
 #landing-spacer {
@@ -72,15 +72,21 @@ h2 {
 }
 #dot1{
 position: absolute;
-left: 65%;
+left: calc(-1000px + 65%);
 top: 82vh;
 z-index: 3;
+animation-delay: 05.s;
+    transform: translateX(calc(1000px + 65%));
+    transition: all 0.5s ease-in-out;
 }
 #dot2{
 position: absolute;
-left: 30%;
+left: calc(-1000px + 30%);
 top: 82vh;
 z-index: 3;
+animation-delay: 05.s;
+    transform: translateX(calc(1000px + 30%));
+    transition: all 0.5s ease-in-out;
 }
 a {
     text-emphasis: none;
@@ -101,7 +107,7 @@ a {
     padding:2vh;
     position: fixed;
     top: -10vh;
-    z-index: 2;
+    z-index: 6;
     width: calc(100% - 4vh);
     /* display: none; */
     transition: all 300ms ease-in-out;
@@ -116,7 +122,7 @@ a {
     padding:2vh;
     position: fixed;
     top: -10vh;
-    z-index: 2;
+    z-index: 4;
     width: calc(100% - 4vh);
     /* display: none; */
     transition: all 300ms ease-in-out;
