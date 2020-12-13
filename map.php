@@ -30,7 +30,6 @@
             <button id="ajaxButton" type="button">Make a request</button>
         </div>
         <div id="map"></div>
-
 </body>
 <script src="map.js"></script>
 </html>
