@@ -18,7 +18,16 @@
     <link rel = "icon" href = "icon.png" type = "image/x-icon"> 
 </head>
 
-<body>
+<body id="test">
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon"><img src="menu-icon.png"></label>
+    <input type="checkbox" id="home-link" />
+    <label for="home-link" class="nav-img"><img src="home-icon.png"></label>
+        <div id='web-bar'>
+            <a href="index.html"><h4>Home</h4></a>
+            <a href="map.html"><h4>Map</h4></a>
+            <a href="about.html"><h4>About</h4></a>
+        </div>
         <div id='nav-bar'>
             <input type="text" id="startLoc" value="" placeholder="Start Location">
             <input type="text" id="endLoc" value="" placeholder="End Location">
