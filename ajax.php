@@ -11,16 +11,16 @@ $headers = array(
 );
 
 $request->setHeader($headers);
-echo $_POST['lat1'];
+echo $_GET['lat1'];
 $parameters = array(
     // Request parameters
-    'lat1' => $_POST['lat1'],
-    'lon1' => $_POST['lon1'],
-    'lat2' => $_POST['lat2'],
-    'lon2' => $_POST['lon1'],
-    'startTime' => $_POST['startTime'],
-    '$format' => $_POST['$format'],
-    '$orderby'=> $_POST['$orderby'],
+    'lat1' => $_GET['lat1'],
+    'lon1' => $_GET['lon1'],
+    'lat2' => $_GET['lat2'],
+    'lon2' => $_GET['lon1'],
+    'startTime' => $_GET['startTime'],
+    '$format' => $_GET['$format'],
+    '$orderby'=> $_GET['$orderby'],
 );
 
 $url->setQueryVariables($parameters);
