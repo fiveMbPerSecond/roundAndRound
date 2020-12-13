@@ -1,9 +1,11 @@
 <h1 align="center">round and round</h1>
 
-### UPDATE: ETA Retrieval Works -> Not shown in video
+### UPDATE: ETA Retrieval Works -> Not shown in video, shown in demo below
+
+<b>Here is the website: [roundandround.tech](roundandround.tech)</b>
 
 ### Working
-- Correctly parses multiple time and location values
+- Correctly parses multiple time and location values for Houston locations
 - ETA Retrival -> Commerce St, Houston TX | Austin St, Houston TX | 12/13/2020 9:00 PM (for working example 5s runtime)
 - Line Drawing Visualization
 
