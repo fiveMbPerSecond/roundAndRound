@@ -72,10 +72,10 @@ function testdat() {
     throw new Error("Could not create HTTP request object.");
   }
   
-  var request = testdat();
-  request.open("GET", "https://hacktj2020api.eastbanctech.com/transitiq/CalculateItineraryByPoints?lat1=29.7520116285855&lon1=-95.3713343539019&lat2=29.7548465554328&lon2=-95.3357880398602&startTime=datetime%272012-09-12T20:00:00Z%27&$format=json&$orderby=EndTime&subscription-key=3e65ceaade6c438c8abcebcd79766404", true);
-  request.send(null);
-  request.onreadystatechange = function() {
-    if (request.readyState == 4)
-      alert(request.responseText);
-  };
+//   var request = testdat();
+//   request.open("GET", "https://hacktj2020api.eastbanctech.com/transitiq/CalculateItineraryByPoints?lat1=29.7520116285855&lon1=-95.3713343539019&lat2=29.7548465554328&lon2=-95.3357880398602&startTime=datetime%272012-09-12T20:00:00Z%27&$format=json&$orderby=EndTime&subscription-key=3e65ceaade6c438c8abcebcd79766404", true);
+//   request.send(null);
+//   request.onreadystatechange = function() {
+//     if (request.readyState == 4)
+//       alert(request.responseText);
+//   };

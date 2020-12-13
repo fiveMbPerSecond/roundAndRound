@@ -28,9 +28,6 @@
             <script>
                 ajax()
             </script>
-            <script>
-                console.log(data);
-            </script>
         </div>
         <div id="map"></div>
 </body>

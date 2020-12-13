@@ -1,4 +1,5 @@
 function ajax() {
+    var data;
     var httpRequest;
     document.getElementById("ajaxButton").addEventListener('click', makeRequest);
   
@@ -14,11 +15,11 @@ function ajax() {
       httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
       httpRequest.send();
     }
-    var data;
     function alertContents() {
       if (httpRequest.readyState === XMLHttpRequest.DONE) {
         if (httpRequest.status === 200) {
           data = JSON.parse(httpRequest.responseText);
+          console.log
         } else {
           alert('There was a problem with the request.');
         }
