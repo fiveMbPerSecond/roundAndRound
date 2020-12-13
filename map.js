@@ -1,7 +1,8 @@
-var mymap = L.map('map').setView([29.749907, -95.358421], 13);
+var mymap = L.map('map').setView([39.8283, -98.5795], 4);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
+    minZoom: 3,
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1,
@@ -13,21 +14,20 @@ var latlngs = [
     [37.77, -122.43],
     [34.04, -118.2]
 ];
-var polyline = L.polyline(latlngs, {color: 'red'}).addTo(mymap);
+// var polyline = L.polyline(latlngs, {color: 'red'}).addTo(mymap);
 // zoom the map to the polyline
-mymap.fitBounds(polyline.getBounds());
+// mymap.fitBounds(polyline.getBounds());
 
+var sx, sy, ex, ey, stime;
 function calcRoute() {
-    var sx = document.getElementById("startLat").value;
-    var sy = document.getElementById("startLon").value;
-    var ex = document.getElementById("endLat").value;
-    var ey = document.getElementById("endLon").value;
-    var stime = document.getElementById("startTime").value;
-    console.log(sx)
-    console.log(sy)
-    console.log(ex)
-    console.log(ey)
-    console.log(stime)
+    sx = document.getElementById("startLat").value;
+    sy = document.getElementById("startLon").value;
+    ex = document.getElementById("endLat").value;
+    ey = document.getElementById("endLon").value;
+    stime = document.getElementById("startTime").value;
+    if(sx === '' || sy === '' || ex === '' || ey === '' || stime === '')
+        alert("Empty field.");
+
 }
 
 //   $(function testdat() {
