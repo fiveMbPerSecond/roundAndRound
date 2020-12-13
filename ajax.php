@@ -11,7 +11,7 @@ $headers = array(
 );
 
 $request->setHeader($headers);
-echo $_GET['lat1'];
+
 $parameters = array(
     // Request parameters
     'lat1' => $_GET['lat1'],

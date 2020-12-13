@@ -10,7 +10,7 @@ function ajax() {
         return false;
       }
       httpRequest.onreadystatechange = alertContents;
-      httpRequest.open('POST', 'ajax.php');
+      httpRequest.open('GET', 'ajax.php');
       httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
       httpRequest.send('lat1=29.7520116285855&lon1=-95.3713343539019&lat2=29.7548465554328&lon2=-95.3357880398602&startTime=datetime%272012-09-12T20:00:00Z%27&$format=json&$orderby=EndTime&subscription-key=3e65ceaade6c438c8abcebcd79766404');
     }
