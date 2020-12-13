@@ -11,7 +11,7 @@ function ajax(startLoc, endLoc, startTime) {
     alert('Giving up :( Cannot create an XMLHTTP instance');
     return false;
   }
-  httpRequest.open('GET', `ajax.php?lat1=${data1[0]}&lon1=${data1[1]}&lat2=${data2[0]}&lon2=${data2[1]}&startTime=datetime'${startTime}'&$format=json&$orderby=EndTime&subscription-key=3e65ceaade6c438c8abcebcd79766404`, false);
+  httpRequest.open('GET', `ajax.php?lat1=${data1[0]}&lon1=${data1[1]}&lat2=${data2[0]}&lon2=${data2[1]}&startTime=datetime'${startTime}'&$format=json&$orderby=EndTime&subscription-key=3e65ceaade6c438c8abcebcd79766404`, async=false);
   httpRequest.send();
   if (httpRequest.readyState === XMLHttpRequest.DONE) {
     if (httpRequest.status === 200) {
@@ -34,9 +34,9 @@ function loc(startLoc, endLoc) {
     return false;
   }
 
-  httpRequest1.open('GET', `address.php?q=${startLoc}&format=json`,false);
+  httpRequest1.open('GET', `address.php?q=${startLoc}&format=json`,async=false);
   httpRequest1.send();
-  httpRequest2.open('GET', `address.php?q=${endLoc}&format=json`,false);
+  httpRequest2.open('GET', `address.php?q=${endLoc}&format=json`,async=false);
   httpRequest2.send();
   if (httpRequest1.readyState === XMLHttpRequest.DONE) {
     if (httpRequest1.status === 200) {
