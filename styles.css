@@ -253,7 +253,10 @@ input[type=text]:focus {
     border-bottom: 3px solid #4b63b4;
     color:  #4b63b4;
   }
-
+::placeholder {
+    color:  #26325B;
+    opacity: 90%;
+}
   p {
     font-family: 'Trebuchet MS', sans-serif;
     font-size: 1.25em;
