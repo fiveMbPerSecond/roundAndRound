@@ -24,10 +24,10 @@
             <input type="text" id="endLon" value="" placeholder="endLon">
             <input type="text" id="startTime" value="" placeholder="hour:minute">
             <button onclick="testdat()">Calc</button>
+            <button id="ajaxButton" type="button">Make a request</button>
             <script>
                 ajax()
             </script>
-            <button id="ajaxButton" type="button">Make a request</button>
         </div>
         <div id="map"></div>
 </body>
