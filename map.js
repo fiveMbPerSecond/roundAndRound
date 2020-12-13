@@ -38,6 +38,12 @@ function calcRoute() {
     ajax(s,e,date.toISOString());
     date = new Date(other["value"][0].EndTime);
     document.getElementById("output").value = date.toString();
+    latlngs = [
+        data1,
+        data2
+    ]
+    var polyline = L.polyline(latlngs, {color: 'red'}).addTo(mymap);
+    mymap.fitBounds(polyline.getBounds());
 
 }
 
