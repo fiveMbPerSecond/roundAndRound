@@ -23,7 +23,7 @@ function calcRoute() {
     s = document.getElementById("startLoc").value;
     e = document.getElementById("endLoc").value;
     stime = document.getElementById("startTime").value;
-    if(sx === '' || sy === '' || ex === '' || ey === '' || stime === '')
+    if(s === '' || e === '' || stime === '')
         alert("Empty field.");
     ajax(s,e,stime);
 
