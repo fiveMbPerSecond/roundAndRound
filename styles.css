@@ -124,7 +124,16 @@ h3 {
 #menu-toggle {
     display: none;
   }
-  
+button {
+    background: #394881;
+    border: none;
+    font-size: 1.25rem;
+    color:  #FF706B;
+}
+button:hover {
+    background: #4c557a;
+    color:  #fc8f8c;
+}
 .menu-icon {
 position: absolute;
 top: 2vh;
