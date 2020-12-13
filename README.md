@@ -3,8 +3,9 @@
 ### UPDATE: ETA Retrieval Works -> Not shown in video
 
 ### Working
-- Correctly parses multiple time values
+- Correctly parses multiple time and location values
 - ETA Retrival -> Commerce St, Houston TX | Austin St, Houston TX | 12/13/2020 9:00 PM (for working example 5s runtime)
+- Line Drawing Visualization
 
 ### Currently in progress
 - User saveable routes
