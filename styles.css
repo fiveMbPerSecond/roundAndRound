@@ -55,11 +55,13 @@ h2 {
 position: absolute;
 left: 65%;
 top: 82vh;
+z-index: 3;
 }
 #dot2{
 position: absolute;
 left: 30%;
 top: 82vh;
+z-index: 3;
 }
 a {
     text-emphasis: none;
@@ -176,6 +178,7 @@ top: 10vh;
 #menu-toggle:checked ~ #home-link {
 top: 10vh;
 }
+
 input[type=text] {
     width: 100%;
     padding: 12px 20px;
