@@ -18,15 +18,14 @@ var latlngs = [
 // zoom the map to the polyline
 // mymap.fitBounds(polyline.getBounds());
 
-var sx, sy, ex, ey, stime;
+var s, e, stime;
 function calcRoute() {
-    sx = document.getElementById("startLat").value;
-    sy = document.getElementById("startLon").value;
-    ex = document.getElementById("endLat").value;
-    ey = document.getElementById("endLon").value;
+    s = document.getElementById("startLoc").value;
+    e = document.getElementById("endLoc").value;
     stime = document.getElementById("startTime").value;
-    if(sx === '' || sy === '' || ex === '' || ey === '' || stime === '')
+    if(s === '' || e === '' || stime === '')
         alert("Empty field.");
+    ajax(s,e,stime);
 
 }
 

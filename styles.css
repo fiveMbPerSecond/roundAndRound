@@ -48,7 +48,7 @@ h1 {
     text-align: center;
     animation-delay: 05.s;
     transform: translateX(1000px);
-    transition: all 0.5s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 #landing-spacer {
     height: 10vh;
@@ -77,7 +77,7 @@ top: 82vh;
 z-index: 3;
 animation-delay: 05.s;
     transform: translateX(calc(1000px + 65%));
-    transition: all 0.5s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 #dot2{
 position: absolute;
@@ -86,7 +86,7 @@ top: 82vh;
 z-index: 3;
 animation-delay: 05.s;
     transform: translateX(calc(1000px + 30%));
-    transition: all 0.5s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 a {
     text-emphasis: none;
@@ -246,7 +246,9 @@ input[type=text] {
     transition: 0.5s;
     outline: none;
   }
-
+#output {
+    border: 3px solid #26325B;
+}
 input[type=text]:focus {
     border-bottom: 3px solid #4b63b4;
     color:  #4b63b4;
