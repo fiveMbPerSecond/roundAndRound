@@ -125,14 +125,13 @@ h3 {
     display: none;
   }
 button {
-    background: #394881;
+    background: #26325B;
     border: none;
     font-size: 1.25rem;
-    color:  #FF706B;
+    color:  #FFFFFF;
 }
 button:hover {
-    background: #4c557a;
-    color:  #fc8f8c;
+    background: #4b63b4;
 }
 .menu-icon {
 position: absolute;
