@@ -39,7 +39,7 @@ function calcRoute() {
         "lon2": "-95.3357880398602",
         "startTime": "2020-12-13T00:00Z",
         "$format": "json",
-        "$orderby": "AdjustedEndTime",
+        "$orderby": "EndTime",
     };
   
     $.ajax({
