@@ -74,6 +74,33 @@ a {
 }
 input[type="text"], textarea {
 
-    background-color : #d1d1d1; 
+    background-color : #F6E8A9; 
   
   }
+h3 {
+    padding: 0;
+    margin: 2rem;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    color: #394881;
+}
+#info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    width: 95%;
+    grid-gap: 1rem;
+    padding: 2.5%;
+}
+.card {
+    background: #FF706B;
+    border-radius: 10px;
+    width: calc(100% - 6rem);
+    height: 65vh;
+    padding: 3rem;
+}
+#about-spacer {
+    height: 3vh;
+}
