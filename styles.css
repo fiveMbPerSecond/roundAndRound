@@ -164,12 +164,16 @@ input[type=text] {
     width: 100%;
     padding: 12px 20px;
     box-sizing: border-box;
-    border: 3px solid #ff3f38;
+    background: none;
+    border-bottom: 3px solid #26325B;
+    font-size: 1.25rem;
+    color:  #26325B;
     -webkit-transition: 0.5s;
     transition: 0.5s;
     outline: none;
   }
 
 input[type=text]:focus {
-    border: 3px solid #85fbff ;
+    border-bottom: 3px solid #4b63b4;
+    color:  #4b63b4;
   }
