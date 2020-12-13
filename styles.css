@@ -19,6 +19,10 @@ h1 {
 #container {
     height: 100vh;
     text-align: center;
+    position: relative;
+}
+#test{
+    position: relative;
 }
 #bus {
     margin: auto;
@@ -63,16 +67,23 @@ a {
 }
 #map {
     background-color: #bbb;
-    height: 90vh;
+    height: 100vh;
     width: 100%;
+    z-index: 0;
 }
 #nav-bar {
-    height:6vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-template-rows: 6vh;
     grid-gap: 1rem;
+    height:6vh;
     padding:2vh;
+    position: fixed;
+    top: -10vh;
+    z-index: 2;
+    width: 100%;
+    /* display: none; */
+    transition: all 300ms ease-in-out;
 }
 input[type="text"], textarea {
     border: none;
@@ -108,4 +119,28 @@ h3 {
 }
 #about-title {
     height: 40vh;
+}
+#menu-toggle {
+    display: none;
+  }
+  
+.menu-icon {
+position: absolute;
+top: 2vh;
+right: 30px;
+font-size: 24px;
+transition: all 300ms ease-in-out;
+z-index: 2;
+}
+.menu-icon img {
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+}
+#menu-toggle:checked ~ .nav-bar {
+top: 0;
+}
+
+#menu-toggle:checked + .menu-icon {
+top: 12vh;
 }
