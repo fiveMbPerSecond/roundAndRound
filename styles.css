@@ -73,9 +73,8 @@ a {
     padding:2vh;
 }
 input[type="text"], textarea {
-
-    background-color : #F6E8A9; 
-  
+    border: none;
+    border-color: transparent;
   }
 h3 {
     padding: 0;
@@ -103,4 +102,7 @@ h3 {
 }
 #about-spacer {
     height: 3vh;
+}
+#about-title {
+    height: 40vh;
 }
