@@ -67,5 +67,13 @@ a {
     width: 100%;
 }
 #nav-bar {
-    height:10vh;
+    height:6vh;
+    display: flex;
+    justify-content: space-around;
+    padding:2vh;
 }
+input[type="text"], textarea {
+
+    background-color : #d1d1d1; 
+  
+  }
