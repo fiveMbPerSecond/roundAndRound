@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<?php
 // This sample uses the Apache HTTP client from HTTP Components (http://hc.apache.org/httpcomponents-client-ga/)
 require_once 'HTTP/Request2.php';
 
@@ -39,3 +46,6 @@ catch (HttpException $ex)
     echo $ex;
 }
 
+?>
+</body>
+</html>
