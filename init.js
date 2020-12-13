@@ -70,7 +70,7 @@ function loc(startLoc, endLoc) {
   }
 }
 function waitForElement(){
-  if(typeof data !== "undefined" || typeof data1 !== "undefined" || typeof data2 !== "undefined"){
+  if(typeof data1 !== "undefined" || typeof data2 !== "undefined"){
       //variable exists, do what you want
   }
   else{

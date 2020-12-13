@@ -17,7 +17,14 @@ var latlngs = [
 // var polyline = L.polyline(latlngs, {color: 'red'}).addTo(mymap);
 // zoom the map to the polyline
 // mymap.fitBounds(polyline.getBounds());
-
+function waitForData() {
+    if(typeof data !== "undefined"){
+        //variable exists, do what you want
+    }
+    else{
+        setTimeout(waitForElement, 250);
+    }
+}
 var s, e, stime;
 function calcRoute() {
     s = document.getElementById("startLoc").value;
@@ -29,6 +36,7 @@ function calcRoute() {
     if (isNaN(date))
         alert("Invalid Date: must have day, month, and year");
     ajax(s,e,date.toISOString());
+    waitForData();
     date = new Date(data["value"][0].EndTime);
     document.getElementById("output").value = date.toString();
 
