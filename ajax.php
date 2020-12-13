@@ -2,7 +2,7 @@
 // This sample uses the Apache HTTP client from HTTP Components (http://hc.apache.org/httpcomponents-client-ga/)
 require_once 'HTTP/Request2.php';
 
-$request = new Http_Request2('https://hacktj2020api.eastbanctech.com/transitiq/CalculateItineraryArrivingAt');
+$request = new Http_Request2('https://hacktj2020api.eastbanctech.com/transitiq/CalculateItineraryByPoints');
 $url = $request->getUrl();
 
 $headers = array(
