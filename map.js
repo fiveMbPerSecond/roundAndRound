@@ -29,3 +29,34 @@ function calcRoute() {
     console.log(ey)
     console.log(stime)
   }
+
+  $(function testdat() {
+    var params = {
+        // Request parameters
+        "lat1": "29.7520116285855",
+        "lon1": "-95.3713343539019",
+        "lat2": "29.7548465554328",
+        "lon2": "-95.3357880398602",
+        "startTime": "2020-12-13T00:00Z",
+        "$format": "json",
+        "$orderby": "AdjustedEndTime",
+    };
+  
+    $.ajax({
+        url: "https://hacktj2020api.eastbanctech.com/transitiq/CalculateItineraryByPoints?" + $.param(params),
+        beforeSend: function(xhrObj){
+            // Request headers
+            xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","3e65ceaade6c438c8abcebcd79766404");
+        },
+        type: "GET",
+        // Request body
+        data: "{body}",
+    })
+    .done(function(data) {
+        alert("success");
+    })
+    .fail(function() {
+        print(data);
+        alert("error");
+    });
+});
