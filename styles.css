@@ -75,6 +75,7 @@ a {
 input[type="text"], textarea {
     border: none;
     border-color: transparent;
+    padding: 0px 10px;
   }
 h3 {
     padding: 0;
