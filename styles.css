@@ -258,4 +258,5 @@ input[type=text]:focus {
     font-family: 'Trebuchet MS', sans-serif;
     font-size: 1.25em;
     color:  #26325B;
+    text-align: center;
   }
