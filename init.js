@@ -11,17 +11,13 @@ function ajax(startLoc, endLoc, startTime) {
     alert('Giving up :( Cannot create an XMLHTTP instance');
     return false;
   }
-  waitForElement();
-  httpRequest.onreadystatechange = alertContents;
-  httpRequest.open('GET', `ajax.php?lat1=${data1[0]}lon1=${data1[1]}&lat2=${data2[0]}&lon2=${data2[1]}&startTime=datetime'${stime}'&$format=json&$orderby=EndTime&subscription-key=3e65ceaade6c438c8abcebcd79766404`);
+  httpRequest.open('GET', `ajax.php?lat1=${data1[0]}lon1=${data1[1]}&lat2=${data2[0]}&lon2=${data2[1]}&startTime=datetime'${stime}'&$format=json&$orderby=EndTime&subscription-key=3e65ceaade6c438c8abcebcd79766404`, false);
   httpRequest.send();
-  function alertContents() {
-    if (httpRequest.readyState === XMLHttpRequest.DONE) {
-      if (httpRequest.status === 200) {
-        data = JSON.parse(httpRequest.responseText);
-      } else {
-        alert('There was a problem with the request.');
-      }
+  if (httpRequest.readyState === XMLHttpRequest.DONE) {
+    if (httpRequest.status === 200) {
+      data = JSON.parse(httpRequest.responseText);
+    } else {
+      alert('There was a problem with the request.');
     }
   }
 }
@@ -38,30 +34,24 @@ function loc(startLoc, endLoc) {
     return false;
   }
 
-  httpRequest1.onreadystatechange = savelocation1;
-  httpRequest1.open('GET', `address.php?q=${startLoc}&format=json`);
+  httpRequest1.open('GET', `address.php?q=${startLoc}&format=json`,false);
   httpRequest1.send();
-  httpRequest2.onreadystatechange = savelocation2;
-  httpRequest2.open('GET', `address.php?q=${endLoc}&format=json`);
+  httpRequest2.open('GET', `address.php?q=${endLoc}&format=json`,false);
   httpRequest2.send();
-  function savelocation1() {
-    if (httpRequest1.readyState === XMLHttpRequest.DONE) {
-      if (httpRequest1.status === 200) {
-        a = JSON.parse(httpRequest1.responseText);
-        data1 = [a[0].lat, a[0].lon];
-      } else {
-        alert('There was a problem with the request.');
-      }
+  if (httpRequest1.readyState === XMLHttpRequest.DONE) {
+    if (httpRequest1.status === 200) {
+      a = JSON.parse(httpRequest1.responseText);
+      data1 = [a[0].lat, a[0].lon];
+    } else {
+      alert('There was a problem with the request.');
     }
   }
-  function savelocation2() {
-    if (httpRequest2.readyState === XMLHttpRequest.DONE) {
-      if (httpRequest2.status === 200) {
-        b = JSON.parse(httpRequest2.responseText);
-        data2 = [b[0].lat, b[0].lon];
-      } else {
-        alert('There was a problem with the request.');
-      }
+  if (httpRequest2.readyState === XMLHttpRequest.DONE) {
+    if (httpRequest2.status === 200) {
+      b = JSON.parse(httpRequest2.responseText);
+      data2 = [b[0].lat, b[0].lon];
+    } else {
+      alert('There was a problem with the request.');
     }
   }
 }
