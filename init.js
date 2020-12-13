@@ -1,6 +1,7 @@
 var data1;
 var data2;
 var data;
+var other;
 function ajax(startLoc, endLoc, startTime) {
   var data;
   var httpRequest;
@@ -16,6 +17,7 @@ function ajax(startLoc, endLoc, startTime) {
   if (httpRequest.readyState === XMLHttpRequest.DONE) {
     if (httpRequest.status === 200) {
       data = JSON.parse(httpRequest.responseText);
+      other = data;
     } else {
       alert('There was a problem with the request.');
     }
