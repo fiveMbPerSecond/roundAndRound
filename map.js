@@ -37,7 +37,7 @@ function calcRoute() {
         alert("Invalid Date: must have day, month, and year");
     ajax(s,e,date.toISOString());
     waitForData();
-    date = new Date(data["value"][0].EndTime);
+    date = new Date(other["value"][0].EndTime);
     document.getElementById("output").value = date.toString();
 
 }
