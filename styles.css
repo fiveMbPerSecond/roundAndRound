@@ -10,7 +10,7 @@ h1 {
     font-weight: bold;
     font-size: 6rem;
     line-height: 7rem;
-    color: #F6E8A9;
+    color: #ffd800;
     margin: 0;
 }
 #landing-title {
@@ -22,7 +22,7 @@ h1 {
 }
 #bus {
     margin: auto;
-    background: #F6E8A9;
+    background: #ffd800;
     width: 45%;
     height: 15vh;
     text-align: center;
