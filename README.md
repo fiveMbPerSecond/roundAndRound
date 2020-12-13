@@ -3,8 +3,6 @@
 
 ### Currently in progress
 
-Hopefully this time the heading worked.  
-
 List of things still to do
 - User saveable routes
 - Higher resolution route visualization
