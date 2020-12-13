@@ -30,7 +30,7 @@ function calcRoute() {
     console.log(stime)
   }
 
-  $(function testdat() {
+ $(function testdat() {
     var params = {
         // Request parameters
         "lat1": "29.7520116285855",
@@ -40,6 +40,7 @@ function calcRoute() {
         "startTime": "2020-12-13T00:00Z",
         "$format": "json",
         "$orderby": "AdjustedEndTime",
+        "subscription-key": "3e65ceaade6c438c8abcebcd79766404"
     };
   
     $.ajax({
