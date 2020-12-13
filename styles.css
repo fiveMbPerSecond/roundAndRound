@@ -68,8 +68,9 @@ a {
 }
 #nav-bar {
     height:6vh;
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 1rem;
     padding:2vh;
 }
 input[type="text"], textarea {
