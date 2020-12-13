@@ -22,51 +22,7 @@
             <input type="text" id="endLon" value="" placeholder="endLon">
             <input type="text" id="startTime" value="" placeholder="hour:minute">
             <button onclick="testdat()">Calc</button>
-            
-            <?php
-            // This sample uses the Apache HTTP client from HTTP Components (http://hc.apache.org/httpcomponents-client-ga/)
-            require_once 'HTTP/Request2.php';
-
-            $request = new Http_Request2('https://hacktj2020api.eastbanctech.com/transitiq/CalculateItineraryArrivingAt');
-            $url = $request->getUrl();
-
-            $headers = array(
-                // Request headers
-                'Ocp-Apim-Subscription-Key' => '3e65ceaade6c438c8abcebcd79766404',
-            );
-
-            $request->setHeader($headers);
-
-            $parameters = array(
-                // Request parameters
-                'lat1' => '29.7520116285855',
-                'lon1' => '-95.3713343539019',
-                'lat2' => '29.7548465554328',
-                'lon2' => '-95.3357880398602',
-                'startTime' => '2020-12-13T00:00Z',
-                '$format' => 'json',
-                '$orderby'=> 'EndTime',
-            );
-
-            $url->setQueryVariables($parameters);
-
-            $request->setMethod(HTTP_Request2::METHOD_GET);
-
-            // Request body
-            $request->setBody("{body}");
-
-            try
-            {
-                $response = $request->send();
-                echo $response->getBody();
-            }
-            catch (HttpException $ex)
-            {
-                echo $ex;
-            }
-
-            ?>
-
+            <button id="ajaxButton" type="button">Make a request</button>
         </div>
         <div id="map"></div>
 </body>
