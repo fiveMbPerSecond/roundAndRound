@@ -30,33 +30,52 @@ function calcRoute() {
     console.log(stime)
   }
 
-  $(function testdat() {
-    var params = {
-        // Request parameters
-        "lat1": "29.7520116285855",
-        "lon1": "-95.3713343539019",
-        "lat2": "29.7548465554328",
-        "lon2": "-95.3357880398602",
-        "startTime": "2020-12-13T00:00Z",
-        "$format": "json",
-        "$orderby": "AdjustedEndTime",
-    };
+//   $(function testdat() {
+//     var params = {
+//         // Request parameters
+//         "lat1": "29.7520116285855",
+//         "lon1": "-95.3713343539019",
+//         "lat2": "29.7548465554328",
+//         "lon2": "-95.3357880398602",
+//         "startTime": "2020-12-13T00:00Z",
+//         "$format": "json",
+//         "$orderby": "AdjustedEndTime",
+//     };
   
-    $.ajax({
-        url: "https://hacktj2020api.eastbanctech.com/transitiq/CalculateItineraryByPoints?" + $.param(params),
-        beforeSend: function(xhrObj){
-            // Request headers
-            xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","3e65ceaade6c438c8abcebcd79766404");
-        },
-        type: "GET",
-        // Request body
-        data: "{body}",
-    })
-    .done(function(data) {
-        alert("success");
-    })
-    .fail(function() {
-        print(data);
-        alert("error");
-    });
-});
+//     $.ajax({
+//         url: "https://hacktj2020api.eastbanctech.com/transitiq/CalculateItineraryByPoints?" + $.param(params),
+//         beforeSend: function(xhrObj){
+//             // Request headers
+//             xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","3e65ceaade6c438c8abcebcd79766404");
+//         },
+//         type: "GET",
+//         // Request body
+//         data: "{body}",
+//     })
+//     .done(function(data) {
+//         alert("success");
+//     })
+//     .fail(function() {
+//         console.log(data);
+//         alert("error");
+//     });
+// });
+
+function testdat() {
+    try {return new XMLHttpRequest();}
+    catch (error) {}
+    try {return new ActiveXObject("Msxml2.XMLHTTP");}
+    catch (error) {}
+    try {return new ActiveXObject("Microsoft.XMLHTTP");}
+    catch (error) {}
+  
+    throw new Error("Could not create HTTP request object.");
+  }
+  
+  var request = testdat();
+  request.open("GET", "https://hacktj2020api.eastbanctech.com/transitiq/CalculateItineraryByPoints?lat1=29.7520116285855&lon1=-95.3713343539019&lat2=29.7548465554328&lon2=-95.3357880398602&startTime=datetime%272012-09-12T20:00:00Z%27&$format=json&$orderby=EndTime&subscription-key=3e65ceaade6c438c8abcebcd79766404", true);
+  request.send(null);
+  request.onreadystatechange = function() {
+    if (request.readyState == 4)
+      alert(request.responseText);
+  };
