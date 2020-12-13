@@ -19,7 +19,7 @@ function ajax() {
       if (httpRequest.readyState === XMLHttpRequest.DONE) {
         if (httpRequest.status === 200) {
           data = JSON.parse(httpRequest.responseText);
-          console.log
+          console.log(data)
         } else {
           alert('There was a problem with the request.');
         }
