@@ -1,24 +1,21 @@
 var data1;
 var data2;
+var data;
 function ajax(startLoc, endLoc, startTime) {
   var data;
   var httpRequest;
-  document.getElementById("ajaxButton").addEventListener('click', makeRequest);
-  loc(startloc, endloc)
-  function makeRequest() {
-    httpRequest = new XMLHttpRequest();
-    httpRequest2 = new XMLHttpRequest();
+  loc(startLoc, endLoc)
+  httpRequest = new XMLHttpRequest();
 
-    if (!httpRequest) {
-      alert('Giving up :( Cannot create an XMLHTTP instance');
-      return false;
-    }
-
-    httpRequest.onreadystatechange = alertContents;
-    httpRequest.open('GET', `ajax.php?lat1=${data1[0]}lon1=${data1[1]}&lat2=${data2[0]}&lon2=${data2[1]}&startTime=datetime'2012-09-12T20:00:00Z'&$format=json&$orderby=EndTime&subscription-key=3e65ceaade6c438c8abcebcd79766404`);
-    httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    httpRequest.send();
+  if (!httpRequest) {
+    alert('Giving up :( Cannot create an XMLHTTP instance');
+    return false;
   }
+
+  httpRequest.onreadystatechange = alertContents;
+  httpRequest.open('GET', `ajax.php?lat1=${data1[0]}lon1=${data1[1]}&lat2=${data2[0]}&lon2=${data2[1]}&startTime=datetime'${stime}'&$format=json&$orderby=EndTime&subscription-key=3e65ceaade6c438c8abcebcd79766404`);
+  httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  httpRequest.send();
   function alertContents() {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {

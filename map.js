@@ -25,7 +25,10 @@ function calcRoute() {
     stime = document.getElementById("startTime").value;
     if(s === '' || e === '' || stime === '')
         alert("Empty field.");
-    ajax(s,e,stime);
+    date = new Date(stime);
+    if (isNaN(date))
+        alert("Invalid Date");
+    ajax(s,e,date.toISOString());
 
 }
 
