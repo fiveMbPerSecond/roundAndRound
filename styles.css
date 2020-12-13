@@ -255,7 +255,7 @@ input[type=text]:focus {
   }
 ::placeholder {
     color:  #26325B;
-    opacity: 90%;
+    opacity: 70%;
 }
   p {
     font-family: 'Trebuchet MS', sans-serif;
