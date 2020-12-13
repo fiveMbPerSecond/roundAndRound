@@ -41,11 +41,11 @@ function loc(startLoc, endLoc) {
   }
 
   httpRequest1.onreadystatechange = savelocation1;
-  httpRequest1.open('GET', `nominatim.php?q=${startLoc}&format=json`);
+  httpRequest1.open('GET', `address.php?q=${startLoc}&format=json`);
   httpRequest1.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   httpRequest1.send();
   httpRequest2.onreadystatechange = savelocation2;
-  httpRequest2.open('GET', `nominatim.php?${endLoc}&format=json`);
+  httpRequest2.open('GET', `address.php?q=${endLoc}&format=json`);
   httpRequest2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   httpRequest2.send();
   function savelocation1() {

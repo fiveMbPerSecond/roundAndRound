@@ -27,7 +27,7 @@ function calcRoute() {
         alert("Empty field.");
     date = new Date(stime);
     if (isNaN(date))
-        alert("Invalid Date");
+        alert("Invalid Date: must have day, month, and year");
     ajax(s,e,date.toISOString());
 
 }
